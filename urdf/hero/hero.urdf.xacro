@@ -14,9 +14,9 @@
 
     <xacro:if value="$(arg use_simulation)">
         <gazebo>
-            <plugin name="rm_ros_control" filename="librm_robot_hw_sim.so">
+            <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
                 <robotNamespace>/</robotNamespace>
-                <robotSimType>rm_gazebo/RmRobotHWSim</robotSimType>
+                <robotParam>robot_description</robotParam>
             </plugin>
         </gazebo>
     </xacro:if>
